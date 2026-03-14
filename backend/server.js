@@ -18,7 +18,10 @@ connectDB();
 const app = express();
 
 app.use(express.json()); 
-app.use(cors()); // This allows your future frontend URL to talk to this backend
+app.use(cors({
+    origin: 'https://darshaneasefrontend.onrender.com', // Your frontend URL
+    credentials: true
+})); // This allows your future frontend URL to talk to this backend
 
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));

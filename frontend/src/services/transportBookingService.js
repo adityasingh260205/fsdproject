@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const TRANSPORT_API_URL = 'http://localhost:5000/api/transport-bookings/';
-const DARSHAN_API_URL = 'http://localhost:5000/api/bookings/'; // Added Darshan API endpoint
+const TRANSPORT_API_URL = import.meta.env.VITE_API_URL ||'http://localhost:5000/api/transport-bookings/';
+const DARSHAN_API_URL = import.meta.env.VITE_API_URL ||'http://localhost:5000/api/bookings/'; // Added Darshan API endpoint
 
 // --- 🚌 TRANSPORT BOOKINGS ---
 const bookTransport = async (bookingData, token) => {
