@@ -19,7 +19,7 @@ const app = express();
 
 app.use(express.json()); 
 app.use(cors({
-    origin: 'https://darshaneasefrontend.onrender.com', // Your frontend URL
+    origin: ['http://localhost:5173', 'https://darshaneasefrontend.onrender.com'], 
     credentials: true
 })); // This allows your future frontend URL to talk to this backend
 

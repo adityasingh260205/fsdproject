@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL ||'http://localhost:5000/api/slots/';
+const API_URL = 'https://darshanease-67nv.onrender.com/api/slots/';
 
 const getTempleSlots = async (templeId) => {
     // THE FIX: Added 'temple/' to perfectly match your backend route!
